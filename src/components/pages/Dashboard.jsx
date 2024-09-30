@@ -59,7 +59,7 @@ const Dashboard = () => {
                   Products
                 </Link>
               </li>
-              {user.user.role === "admin" && (
+              {user?.user?.role === "admin" && (
                 <li className="nav-item">
                   <Link
                     className="nav-link text-white link-Effect"
@@ -75,7 +75,7 @@ const Dashboard = () => {
 
         <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
           <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h5>Welcome, {user.user.role}</h5>
+            <h5>Welcome, {user?.user?.role}</h5>
 
             <div className="dropdown">
               <a
@@ -99,7 +99,7 @@ const Dashboard = () => {
                 aria-labelledby="navbarDropdownMenuAvatar"
               >
                 <li>
-                  <p className="dropdown-item">{user.user.role}</p>
+                  <p className="dropdown-item">{user?.user?.role}</p>
                 </li>
                 <li>
                   <button className="dropdown-item" onClick={handleLogout}>
